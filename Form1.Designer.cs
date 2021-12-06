@@ -47,11 +47,27 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txbIdD = new System.Windows.Forms.TextBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.txbNomeA = new System.Windows.Forms.TextBox();
+            this.txbLinguagemA = new System.Windows.Forms.TextBox();
+            this.txbBancoA = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txbIdA = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SqlInjection.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -115,10 +131,10 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(402, 107);
+            this.dataGridView1.Location = new System.Drawing.Point(332, 107);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(386, 204);
+            this.dataGridView1.Size = new System.Drawing.Size(456, 204);
             this.dataGridView1.TabIndex = 7;
             // 
             // btnConsultar
@@ -234,11 +250,143 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.btnExcluir);
+            this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.Controls.Add(this.txbIdD);
+            this.groupBox4.Location = new System.Drawing.Point(272, 326);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(200, 121);
+            this.groupBox4.TabIndex = 18;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Exclusão";
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(40, 68);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(97, 35);
+            this.btnExcluir.TabIndex = 15;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(40, 21);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(18, 15);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "ID";
+            // 
+            // txbIdD
+            // 
+            this.txbIdD.Location = new System.Drawing.Point(40, 39);
+            this.txbIdD.Name = "txbIdD";
+            this.txbIdD.Size = new System.Drawing.Size(120, 23);
+            this.txbIdD.TabIndex = 16;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.btnAlterar);
+            this.groupBox5.Controls.Add(this.txbNomeA);
+            this.groupBox5.Controls.Add(this.txbLinguagemA);
+            this.groupBox5.Controls.Add(this.txbBancoA);
+            this.groupBox5.Controls.Add(this.label8);
+            this.groupBox5.Controls.Add(this.label9);
+            this.groupBox5.Controls.Add(this.label10);
+            this.groupBox5.Controls.Add(this.label7);
+            this.groupBox5.Controls.Add(this.txbIdA);
+            this.groupBox5.Location = new System.Drawing.Point(32, 202);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(200, 230);
+            this.groupBox5.TabIndex = 19;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Alteração";
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Location = new System.Drawing.Point(77, 172);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(97, 35);
+            this.btnAlterar.TabIndex = 20;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // txbNomeA
+            // 
+            this.txbNomeA.Location = new System.Drawing.Point(90, 75);
+            this.txbNomeA.Name = "txbNomeA";
+            this.txbNomeA.Size = new System.Drawing.Size(100, 23);
+            this.txbNomeA.TabIndex = 20;
+            // 
+            // txbLinguagemA
+            // 
+            this.txbLinguagemA.Location = new System.Drawing.Point(90, 104);
+            this.txbLinguagemA.Name = "txbLinguagemA";
+            this.txbLinguagemA.Size = new System.Drawing.Size(100, 23);
+            this.txbLinguagemA.TabIndex = 21;
+            // 
+            // txbBancoA
+            // 
+            this.txbBancoA.Location = new System.Drawing.Point(90, 133);
+            this.txbBancoA.Name = "txbBancoA";
+            this.txbBancoA.Size = new System.Drawing.Size(100, 23);
+            this.txbBancoA.TabIndex = 22;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(37, 141);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(40, 15);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Banco";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(37, 76);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(40, 15);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "Nome";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(10, 107);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(67, 15);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Linguagem";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(46, 49);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(18, 15);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "ID";
+            // 
+            // txbIdA
+            // 
+            this.txbIdA.Location = new System.Drawing.Point(90, 46);
+            this.txbIdA.Name = "txbIdA";
+            this.txbIdA.Size = new System.Drawing.Size(100, 23);
+            this.txbIdA.TabIndex = 18;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -254,6 +402,10 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -279,5 +431,19 @@
         private GroupBox groupBox2;
         private GroupBox groupBox3;
         private Button button3;
+        private GroupBox groupBox4;
+        private Button btnExcluir;
+        private Label label6;
+        private TextBox txbIdD;
+        private GroupBox groupBox5;
+        private TextBox txbNomeA;
+        private TextBox txbLinguagemA;
+        private TextBox txbBancoA;
+        private Label label8;
+        private Label label9;
+        private Label label10;
+        private Label label7;
+        private TextBox txbIdA;
+        private Button btnAlterar;
     }
 }

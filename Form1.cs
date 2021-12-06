@@ -61,5 +61,51 @@ namespace WinFormsADONet
             programador.consultaProgramador(int.Parse(textBox1.Text));
             MessageBox.Show(programador.nome);
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            Programador programador = new Programador();
+            programador.id = int.Parse(txbIdD.Text);
+
+            programador = programador.consultaProgramador(programador.id);
+
+            if (programador == null)
+            {
+                MessageBox.Show("Erro ao excluir: O programador não foi encontrado (404)!");
+                return;
+            }
+
+            bool retorno = programador.excluirProgramador();
+
+            if (retorno == true)
+            {
+                MessageBox.Show("Excluído com sucesso!");
+            }
+            else
+            {
+                MessageBox.Show("Erro ao executar a exclusão!");
+            }
+
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            Programador programador = new Programador();
+            programador.id = int.Parse(txbIdA.Text);
+            programador.nome =  txbNomeA.Text;
+            programador.linguagem = txbLinguagemA.Text;
+            programador.banco = txbBancoA.Text;
+
+            bool retorno = programador.atualizarProgramador();
+
+            if(retorno)
+            {
+                MessageBox.Show("Alterado com sucesso!");
+            }
+            else
+            {
+                MessageBox.Show("Erro ao alterar!");
+            }
+        }
     }
 }
